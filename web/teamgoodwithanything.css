@@ -1,0 +1,22 @@
+/*! Custom styles for User manual and Version webpages used in Network-Routing-Simulator application */
+
+body {
+	padding: 5px;
+}
+
+p {
+	padding-bottom: 10px;
+}
+
+ul {
+	padding-bottom: 10px;
+}
+
+ol {
+	padding-bottom: 5px;
+	margin-left: 20px;
+}
+
+.text-body {
+	padding: 5px;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="teamgoodwithanything.css">
+    <!-- Using style sheet from *http://devinhunt.github.io/typebase.css/*, some rem values might not be working? -->
+    <link rel="stylesheet" href="typebase.css">
+  </head>
+  <body>
+    <h1 style="text-align: center; font-size: 20px; padding-bottom: 15px;">Network Routing Simulator</h1>
+    <h3 style="font-size: 15px; padding-bottom: 10px;">Milestone 4</h3>
+    <p>This application simulates a network routing simulator with four routing algorithms: Random Routing Algorithm, Flooding Routing Algorithm, Breadth
+	First Search Algorithm and Depth First Search Algorithm. Specifically, this application allows the user to create a network topology, step through
+	simulations of these networks, and track metrics (packets transmitted and average hops) for the simulations.</p>
+	
+    <h5>Menu bar</h5>
+    <div class="text-body">
+      > File
+      <ol>
+        <li>Restore: opens a dialog which allows the user to select a network topology XML file to restore to the application</li>
+        <li>Save: opens a dialog which allows the user to save the current network topology of the application to an XML file</li>
+        <li>Exit: exits the application</li>
+      </ol>
+      > Simulation
+      <ol>
+      	 <li>Step: steps the simulation, which forwards all messages at routers to their neighbours, and may generate a new message based on
+      	 the message generation rate
+      	 </li>
+      	 <li>Undo: steps backwards in the simulation, which moves messages to their previous destination</li>
+      	 <li>Message Generation Rate: opens a dialog which allows the user to set the rate at which messages are generated in the simulation</li>
+      	 <li>Clear Messages: removes the messages from all routers and clears the metrics (note: you cannot step back after this)</li>
+      	 <li>Routing Algorithm: opens a dialog which allows the user to select which routing algorithm to use for the simulation</li>
+      </ol>
+      > Help
+      <ol>
+      	 <li>User manual: opens the current document</li>
+      	 <li>About: team and version information</li>
+      </ol>
+    </div>
+    
+    <h5>Control buttons</h5>
+    <div class="text-body">
+      > Routers
+      <ol>
+      	 <li>Add: opens a dialog which allows the user to enter a name for a new router, then lets the user click anywhere on the main view to
+      	 add the router to the topology</li>
+      	 <li>Remove: removes the selected router from the topology if a router was selected</li>
+      </ol>
+      > Connections
+      <ol>
+      	 <li>Add: after clicked, allows the user to click and drag from one node another to create a new connection between routers on the
+      	 topology</li>
+      	 <li>Remove: removes the selected connection between routers from the topology if a connection was selected</li>
+      </ol>
+    </div>
+    
+    <h5>Guide</h5>
+    <div class="text-body">
+      <p>To add a new router first click on the add button in routers, then user will then have a prompt to 
+      enter a name and then will be prompted to click on the screen where the router should be added. 
+      This can be repeated as many times as desired.</p>
+      <p>To remove a node, click on the node, and the border will change colour to notify you that it has been selected.</p>
+      <p>To create a new connection from one node to another click on one router and drag to another router.</p>
+      <p>To remove a connection, click on the connection and then click on the remove connection button.</p>
+	  <p>To simulate the network, go to the 'Simulation' menu in the menu bar and click 'Step'. The Routing algorithm that was last selected in the RoutingAlgorithm dialog (or RandomRoutingAlgorithm as default) 
+	  will be used to simulate a step in the network.</p>
+	  <p>The undo functionality will only move back messages to their previous destinations and restore the metrics to their values from the last step. This will not undo adding/removing routers/connections.
+	  After restoring a network topology from an XML file, you cannot undo any stored messages/metrics that initially load (the previous messages/metrics do not get saved to XML).</p>
+	  <p>After making a modification to a network topology (add/remove routers/connections) you will not be able to undo to a state earlier than the modification point. Additionally, 
+	  after clearing all messages on the topology through the 'Clear Messages' menu button, you will not be able to undo to a state earlier than that point.</p>
+    </div>
+  </body>
+</html>
